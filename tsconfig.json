@@ -1,0 +1,13 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "module": "es6",
+    "target": "es2016",
+    "sourceMap": false,
+    "noImplicitAny" : true,
+    "watch": true
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
