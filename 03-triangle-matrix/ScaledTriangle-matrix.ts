@@ -36,6 +36,9 @@ class MatrixScaledTriangle extends TriangleBase {
             throw new Error('Failed to get webgl uniform location: u_xScaledMatrix');
         }
 
+        /**
+         * WebGL 中的矩阵数组编写是按列主序的
+         * */
         const xScaledMatrix = new Float32Array([
             this.sx, 0.0, 0.0, 0.0,
             0.0, this.sy, 0.0, 0.0,

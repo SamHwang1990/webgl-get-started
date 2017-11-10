@@ -36,13 +36,13 @@ class RotatedTriangle extends TriangleBase {
             throw new Error('Failed to get webgl uniform location: u_SinB');
         }
 
-        const angle = this.angle;
-        gl.uniform1f(u_CosB, Math.cos(angle));
-        gl.uniform1f(u_SinB, Math.sin(angle));
+        const radian = Math.PI * this.angle / 180.0;
+        gl.uniform1f(u_CosB, Math.cos(radian));
+        gl.uniform1f(u_SinB, Math.sin(radian));
 
         return numbers;
     }
 }
 
 const $canvas = <HTMLCanvasElement> document.getElementById('webgl');
-new RotatedTriangle($canvas, 30).paint();
+new RotatedTriangle($canvas, 90).paint();

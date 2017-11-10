@@ -37,9 +37,12 @@ class MatrixRotatedTriangle extends TriangleBase {
         const radian = Math.PI * this.angle / 180.0;
         const cos = Math.cos(radian), sin = Math.sin(radian);
 
+        /**
+         * WebGL 中的矩阵数组编写是按列主序的
+         * */
         const xRotatedMatrix = new Float32Array([
-            cos, -sin, 0.0, 0.0,
-            sin, cos, 0.0, 0.0,
+            cos, sin, 0.0, 0.0,
+            -sin, cos, 0.0, 0.0,
             0.0, 0.0, 1.0, 0.0,
             0.0, 0.0, 0.0, 1.0
         ]);
